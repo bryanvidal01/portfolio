@@ -17,5 +17,15 @@ function bbx_enqueue_scripts() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'global' );
 }
-add_action( 'wp_enqueue_scripts', 'bbx_enqueue_scripts' );
 
+@ini_set( 'upload_max_size' , '64M' );
+
+@ini_set( 'post_max_size', '64M');
+
+@ini_set( 'max_execution_time', '300' );
+
+// Thumbnail
+add_image_size( 'full_screen', 2000 );
+
+
+add_action( 'wp_enqueue_scripts', 'bbx_enqueue_scripts' );
